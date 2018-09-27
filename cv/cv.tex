@@ -1,0 +1,266 @@
+% Gabriel Ryan's Resume take 1 :P
+
+%\documentclass[9pt,letterpaper]{article} % Font size and paper type
+\documentclass{article} % Font size and paper type
+
+\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+%\usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{verbatim} %multiline comments
+
+\definecolor{lightgrey}{gray}{.95}
+\setmainfont{Arial}
+\geometry{right=1in,left=.8in,top=.6in,bottom=.7in}
+\pagestyle{empty} % Suppress page numbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Commands %%%%%%%%%%%%%%%%%%%%%%%%%
+%\rsection{<section title>}
+\newcommand{\rsection}[1]{
+\hspace{-0.4cm}
+\colorbox{lightgrey}{
+\begin{minipage}{1.07\linewidth}
+\vspace{0.25cm}
+\fontsize{14pt}{16pt}\selectfont #1 
+%\rule[9pt]{\linewidth}{1.2pt}
+\vspace{0.15cm}
+\end{minipage}
+}
+\vspace*{-0.2cm}
+}
+%\rjob{<job title>}{<time>}
+\newcommand{\rjob}[2]{
+\vspace{0.1cm}
+\hspace*{-0.3cm}  
+{\fontsize{10pt}{12pt}\selectfont #1} \hfill #2 
+\vspace*{0.1cm} 
+\hspace*{-1.2cm}
+}
+%\begin{ritemize}...\end{ritemize}
+\newenvironment{ritemize}{
+\hspace*{-0.8cm} 
+\begin{minipage}{1.05\linewidth}
+\begin{itemize}
+}{
+\end{itemize}
+\end{minipage}
+\vspace{-0.2cm}
+}
+%\ritem
+\newcommand{\ritem}{
+\item[-]
+%\hspace{-8pt}
+}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%% Header %%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{center}
+\hspace*{-0.45cm} 
+{\fontsize{22pt}{22pt}\selectfont Gabriel Ryan}\\
+%\vspace{1.2cm}
+%\vspace*{-0.5cm}
+\hspace*{0.3cm} 
+\begin{minipage}{\linewidth}
+\vspace{0.1cm}
+%{\fontfamily{Helvetica}\selectfont
+gabe@cs.columbia.edu | (860) 235-1875\\
+3260 Henry Hudson Pkwy. Bronx, NY 10461
+%116th and Broadway New York, NY 10027
+%}
+\end{minipage}
+\vspace{-0.15cm}
+%\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%
+\rsection{Education:} 
+
+\rjob{\textbf{Columbia University}}{Sep 2018 - Present}\\
+\begin{ritemize}
+\ritem PhD Candidate in Computer Science
+\ritem Conducting research in applications of deep learning to dynamic software analysis.
+\end{ritemize}
+
+\rjob{\textbf{Columbia University}}{Sep 2016 - December 2017}\\
+\begin{ritemize}
+\ritem M.S. in Computer Science with GPA 3.97
+\ritem Conducted research in modeling and simulating user behavior for Intrusion Detection Lab.
+\ritem Selected Coursework: Security, Deep Learning, Advanced Deep Learning, Big Data Analytics, Data Exploration Systems, Machine Learning, Natural Language Processing, Operating Systems, High Performance Computing
+\end{ritemize}
+
+\rjob{\textbf{Swarthmore College}}{June 2013}\\
+\begin{ritemize}
+\ritem B.S. Engineering, B.A. Computer Science
+%\ritem GPA: \begin{tabular}[t]{lr} Computer Science & 3.87\\
+%Engineering & 3.46 \\
+%Overall & 3.56
+%\end{tabular}
+%\ritem Spring 2012 Semester Abroad at University of Auckland in New Zealand.
+\ritem Selected Coursework: Advanced Algorithms, Theory of Computation, Artificial Intelligence, Probabilistic Robotics, Computer Systems, Computer Languages, Applied Statistics, Linear Optimization, Linear Systems
+%\ritem Coursework: Data Structures and Algorithms, Algorithms (Advanced), Theory of Computation, Artificial Intelligence, Optimization in Operations Research, Linear System Modeling.
+\end{ritemize}
+\vspace{0.25cm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%
+\rsection{Research Experience:}
+
+\rjob{\textbf{Graduate Research Assistant}, Columbia}{Sep 2018 - Present}\\
+\begin{ritemize}
+  \ritem Currently developing new methods for dynamic software analysis using deep learning methodologies under Prof. Suman Jana.
+\end{ritemize}
+
+\rjob{\textbf{Graduate Research Assistant}, Columbia IDS Lab}{Fall 2016 - Fall 2017}\\
+\begin{ritemize}
+  \ritem Working in Prof. Salvatore Stolfo's lab, developed novel method for modeling and generating user behavior data with neural networks. Designed architecture combining recurrent neural networks with multi task prediction to jointly model events and event timing. Implemented networks in Pytorch and Tensorflow.
+  \ritem Conducted evaluation and modeling of Simulated User Bots (SUBs). Demonstrated how SUB behavior could be deliberately preturbed to register as anomalies with three User Behavior Anomaly Detection Models: Gaussian Mixtures, One Class SVMs, and Isolation Forests. Contributed to Literature Review and Evaluation portions of paper on SUBs, published in IEEE SPW 2018.
+  \item Developed framework for Simulated User Bots on mobile devices using Selenium and Appium. Designed Python API to enable automation of common user tasks, such as browsing the web and sending emails.
+\end{ritemize}
+
+\rjob{\textbf{Seminar Research}, Data Exploration Systems}{Spring 2017 - Spring 2018}\\
+\begin{ritemize}
+    \ritem Implemented methods for quantifying visual complexity of line charts with entropy statistics. Conducted experiments comparing methods and demonstrated that one (Approximate Entropy) performed best for measuring visual complexity.
+  \ritem Developed and conducted user studies demonstrating that users found comparison tasks more difficult when charts had high visual entropy. Implemented experiments in HTML and Javascript on Mechanical Turk.
+  \ritem Presented at IEEE Infoviz 2018 conference and published in IEEE TVCG 2018.
+\end{ritemize}
+
+\rjob{\textbf{Seminar Research}, Adv Big Data Analytics}{Spring 2017}\\
+\begin{ritemize}
+  \ritem Developed graph data queries and synethetic graph data in Tensorflow to demonstrate feasibility of using a deep learning approach to learn graph query parameters.
+  \ritem Implemented Pagerank Algorithm in Tensorflow and demonstrated dampening parameter could be learned from labeled graph data using back propogation. 
+\end{ritemize}
+
+\rjob{\textbf{Research Fellow}, Bryn Mawr Intelligent Systems Lab}{Summer 2013}\\
+\begin{ritemize}
+\ritem Developed tools using ROSJAVA package to run Java reinforcement learning algorithms on ROS robots and simulators using combination of Java and C++.
+\ritem Implemented the HORDE reinforcement learning algorithm in Java and successfully demonstrated that multitask learning outperforms HORDE for robotic sensor prediction.
+\end{ritemize}
+
+\pagebreak{}
+
+\rjob{\textbf{Research Assistant}, Woods Hole Oceanographic Institute}{January 2012}\\
+\begin{ritemize}
+\ritem Automated filtering and parsing of data from tow tank tests of a sub-Arctic current meter in MATLAB, setting research weeks ahead of schedule.
+\ritem Conducted frequency analysis of velocity data and developed burst sampling system that improved the signal to noise ratio by a factor of 3 while minimizing computation and radio usage. 
+\ritem Published work in proceedings of Oceans 2012 conference.
+\end{ritemize}
+
+\rjob{\textbf{Research Fellow}, Swarthmore College Engineering}{Summer 2011}\\
+\begin{ritemize}
+%\ritem Awarded Surdna Summer Research Fellowship to design a wireless thermostat system.
+\ritem Developed a wireless thermostat prototype around an MSP430 microcontroller and Zigbee radios that used low power event driven processing to achieve an estimated life expectancy of 5+ years on a coin cell battery.
+\ritem Wrote MATLAB Zigbee library to interface with Zigbee radios, allowing user to configure and use Zigbee radios through a simplified API.
+\end{ritemize}
+
+\rsection{Professional Experience:}
+
+\rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 - August 2018}\\
+\begin{ritemize}
+\ritem Developed Novo web application for managing large scale deployments of User Behavior sensors and tracked documents using Java Spring Framework with AngularJS front end and Hibernate and Postgres data layer. Design and implement REST API using Swagger specification and Oauth2 authentication. 
+\ritem Developed desktop application for managing and tracking files using Electron, AngularJS.
+\ritem Automated deployment and testing of new builds using Beanstalk and AWS Elastic Computing resources.
+\ritem Integrated high speed file system backed by MongoDb and optimized process for tracking new documents, increasing speed by a factor of over 270\%.
+\ritem Designed and implemented new method for tracking documents in the cloud using Google Drive API.
+\ritem Developed document interception and tracking system using Squid Proxy and ICAP server to integrate with web content filters and automatically track incoming and outgoing documents.
+\end{ritemize}
+
+\rjob{\textbf{Robotics Software Consultant}, 3DDataLtd}{May 2015 - Aug 2015}\\
+\begin{ritemize}
+\ritem Developed a framework for 3d Simultaneous Localization and Mapping using the Lidar Odometry and Mapping algorthm. Modified algorithm to integrate IMU Sensor data using an Extended Kalman Filter. Implemented in C++ with PCL and ROS.
+\end{ritemize}
+
+\rjob{\textbf{Radar Software Engineer}, Raytheon}{Sep 2013 - April 2015}\\
+\begin{ritemize}
+\ritem Maintained radar configuration and verification tools in Perl and Cshell.
+\ritem Analyzed data from radar testing and provide software support for automated calibration, satellite tracking, antenna diagnostics, and maintenance prioritization software in Ada and C++.
+\ritem Developed additions to radar software front end in C++ and Qt to display results of new diagnostic capabilities
+\ritem Earned team achievement award for role in completing integration of new diagnostic capabilities ahead of schedule.
+\end{ritemize}
+
+
+
+%\clearpage{}
+
+
+
+\rjob{\textbf{Writing Associate}, Swarthmore College}{Sep 2011- Dec 2012}\\
+\begin{ritemize}
+\ritem Selected for excellent written and oral communication skills to work in Swarthmore writing program.
+\ritem Conducted half hour conferences with students for revision and good writing practice in college writing center.
+\ritem Assisted one professor per semester in teaching a writing intensive course, meeting regularly with 10-14 students to work on writing skills and assist in planning and revising papers.
+\end{ritemize}
+
+
+%\rjob{\textbf{IT Associate}, Swarthmore College}{Fall 2011}\\
+%\begin{ritemize} 
+%\ritem Selected for excellent communication skills and practical problem solving ability to work on college IT team.
+%\ritem Fielded calls and walk-ins at IT support office. Addressed security and networking issues on PCs. 
+%\end{ritemize}
+
+
+
+%\rjob{\textbf{Intern}, Verizon Laboratories}{January 2011}\\
+%\begin{ritemize}
+%\ritem Shadowed Verizon Interface Design Engineer developing Videochat interface for smartphones.
+%\ritem Evaluated usability of current videochat apps and prepared recommendations for videochat interface design.
+%\end{ritemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Extracurricular %%%%%%%%%%%%%
+\rsection{Publications:}
+
+%\rjob{\textbf{Publications}}{}\\
+\begin{ritemize}
+\ritem Ryan G, Mosca A, Chang R, and Wu E. "At a Glance: Pixel Approximate Entropy as a Measure of Line Chart Complexity" 2018 IEEE Infovis 
+\ritem Dutta P, Ryan G, Zieba A, and Stolfo S. "Simulated User Bots: Real Time Testing of Insider Threat Detection Systems" 2018 IEEE SPW 
+\ritem A. J. Williams, G. P. Ryan and F. T. Thwaites, "Oversampling MAVS for reduction of vortex-shedding velocity-sensing noise," 2012 Oceans, Hampton Roads, VA, 2012, pp. 1-10.
+\end{ritemize}
+
+%\rjob{\textbf{Engineering Capstone}}{Spring 2013}\\
+%\begin{ritemize}
+%\ritem Implemented FastSLAM algorithm and testing simulator in C++ and introduced modifications to the sampling scheme to improve computational efficiency.
+%\ritem Successfully demonstrated algorithm on data collected from Turtlebot running on ROS.
+%\end{ritemize}
+
+%\rjob{\textbf{Computer Science Capstone}}{Fall 2012}\\
+%\begin{ritemize}
+%\ritem Implemented wavelet compression algorithm in C++ on a TMoteSky running on Contiki. 
+%\ritem Modified algorithm for improved efficiency on a low power system, achieving a 78\% decrease in runtime for 2\% decrease in compression performance
+%\end{ritemize}
+
+%\rjob{\textbf{ACM International Collegiate Programming Competition}}{Spring 2011- Fall 2013}\\
+%\begin{ritemize}
+%\ritem Designed and implemented solutions to computer science problems in C++ as part of a three person team.
+%\ritem Placed 5th in 2011 local competition against 16 other teams.
+%\end{ritemize}
+
+%\rjob{\textbf{Class Projects}}{Fall 2010-Spring 2012}\\
+%\begin{ritemize}
+%\ritem Implement particle filter based simultaneous localization and mapping algorithm (FastSLAM) on a Turtlebot using kinect, ROS and Point Cloud Library in C++. (Current)
+%\ritem Implement ECG signal compression on a sensor mote for low power signal transmission in C++. (Current)
+%\ritem Linear Program Solver that uses simplex method to solve LP or identify when the program is unbounded or unsolvable. Written in MATLAB. (Optimization Spring 2012)
+%\ritem Neural Net based A.I. for Turtlebot that parses image data from kinect to learn line following behavior. Written in C++. (Robotics Fall 2011)
+%\ritem Designed Konane game-playing agent utilizing minimax search to win tournament against 32 other teams. Written in Python. (Artificial Intelligence Fall 2011)
+%\ritem Designed Website search and hashing database with interface built using  wxWidgets around Mozilla browser. Written in C++. (Data Structures and Algorithms Spring 2011)
+%\ritem Led team of 3 to develop sound modulation software that reads .wav files and changes their speed using linear interpolation. Written in C. (Digital Logic Fall 2010).
+%\end{ritemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Technical Skills %%%%%%%%%%%%%%%%%%%%%%%%%
+\rsection{Technical Summary:}
+
+\hspace*{-0.3cm}
+\textbf{Languages:} Proficient in C/C++, Java, Python, Matlab, and SQL. \\
+\hspace*{-0.3cm}
+\textbf{Technologies:} Linux, Git, Beanstalk, AWS EC2, Tomcat, Spring, MySQL, POSTGRES, MongoDb, Jupyter Notebook, IPython, Numpy, Pandas, Matplotlib, PySpark, Pytorch, Tensorflow, Keras, ROS, LLVM
+
+
+
+\end{document}
