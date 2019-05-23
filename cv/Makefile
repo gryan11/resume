@@ -1,5 +1,5 @@
 filename = cv
-outfile = GabrielRyanCV.pdf
+outfile = gabriel_ryan_cv.pdf
 
 all: 
 	xelatex $(filename)
