@@ -1,0 +1,24 @@
+Allure Security Technology
+Software Engineer
+Waltham MA
+Sep 2015 - Aug 2018
+- Developed web application for managing large scale deployments of User Behavior sensors and data loss detection using Java Spring Framework with AngularJS front end and Hibernate with Postgres and Mongodb databases. Designed and implement REST API using Swagger specification and Oauth2 authentication. 
+- Developed desktop client application for automated large scale document tracker injection using Electron and AngularJS.
+- Designed and implemented new method for tracking document usage in the cloud using Google Drive API.
+- Developed midstream network based document interception and tracking system using Squid Proxy and ICAP server to automatically inject trackers into suspicious documents.
+
+3D Data Ltd.
+Robotics Software Consultant
+Quincy MA
+May 2015 - Aug 2015
+- Developed a framework for 3d Simultaneous Localization and Mapping using the Lidar Odometry and Mapping algorthm. Modified algorithm to integrate IMU Sensor data using an Extended Kalman Filter. Implemented in C++ with PCL and ROS.
+
+Raytheon Technologies
+Radar Software Engineer
+Waltham MA
+Sep 2013 - May 2015
+- Analyzed data from radar testing and provide software support for automated calibration, satellite tracking, antenna diagnostics, and maintenance prioritization software in Ada and C++.
+- Developed additions to radar software in Ada and C++ for calibration and diagnostics.
+- Earned team achievement award for completing new diagnostic capabilities ahead of schedule.
+
+
