@@ -6,6 +6,7 @@ Sep 2015 - Aug 2018
 - Developed desktop client application for automated large scale document tracker injection using Electron and AngularJS.
 - Designed and implemented new method for tracking document usage in the cloud using Google Drive API.
 - Developed midstream network based document interception and tracking system using Squid Proxy and ICAP server to automatically inject trackers into suspicious documents.
+Public Number: (877) 669-8883
 
 3D Data Ltd.
 Robotics Software Consultant
