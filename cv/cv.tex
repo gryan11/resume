@@ -1,12 +1,12 @@
-% Gabriel Ryan's Resume 
+% Gabriel Ryan's Resume
 
 %\documentclass[9pt,letterpaper]{article} % Font size and paper type
 \documentclass{article} % Font size and paper type
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
+\usepackage[hidelinks]{hyperref} % Required for boldface (\bf and \bfseries) tabular columns
 %\usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{fontspec}
 \usepackage{geometry}
 \usepackage{color}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -16,9 +16,27 @@
 \usepackage{enumitem}
 
 \definecolor{lightgrey}{gray}{.95}
-%\usepackage{noto-mono}
+
+
+%\usepackage{fontspec}
 \usepackage[scale=0.90]{noto-mono}
-%\setmainfont{Arial}
+
+%\usepackage[scaled]{berasans}
+%\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+
+%\usepackage[usefilenames,RMstyle=Light,SSstyle=Light,TTstyle=Light,DefaultFeatures={Ligatures=Common}]{plex-otf} %
+%\renewcommand*\sfdefault{lmssq}
+%\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+
+%\usepackage{helvet}
+%\usepackage{lmodern}
+%\usepackage{tgtermes}
+%\usepackage{palatino}
+
+
 \geometry{right=1in,left=.8in,top=.6in,bottom=.7in}
 \pagestyle{empty} % Suppress page numbers
 
@@ -31,7 +49,7 @@
 \colorbox{lightgrey}{
 \begin{minipage}{1.07\linewidth}
 \vspace{0.22cm}
-\fontsize{14pt}{16pt}\selectfont #1 
+\fontsize{14pt}{16pt}\selectfont #1
 %\rule[9pt]{\linewidth}{1.2pt}
 \vspace{0.12cm}
 \end{minipage}
@@ -41,13 +59,13 @@
 %\rjob{<job title>}{<time>}
 \newcommand{\rjob}[2]{
   \hspace*{-0.3cm}
-{\fontsize{10pt}{12pt}\selectfont #1} \hfill #2 
-\vspace*{0.1cm} 
+{\fontsize{10pt}{12pt}\selectfont #1} \hfill #2
+\vspace*{0.1cm}
 \hspace*{-1.2cm}
 }
 %\begin{ritemize}...\end{ritemize}
 \newenvironment{ritemize}{
-\hspace*{-0.8cm} 
+\hspace*{-0.8cm}
 \begin{minipage}{1.05\linewidth}
 \begin{itemize}
 }{
@@ -65,17 +83,17 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%% Header %%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{center}
-\hspace*{-0.45cm} 
+\hspace*{-0.45cm}
 {\fontsize{22pt}{22pt}\selectfont Gabriel Ryan}\\
 %\vspace{1.2cm}
 %\vspace*{-0.5cm}
-%\hspace*{0.1cm} 
+%\hspace*{0.1cm}
 \begin{minipage}{\linewidth}
 \vspace{0.1cm}
   {\fontsize{12}{12}\selectfont
   %{\normalsize
   %\texttt{
-    \url{gabe@cs.columbia.edu} | \url{www.cs.columbia.edu/~gabe}
+    \texttt{gabe@cs.columbia.edu} | \url{www.cs.columbia.edu/~gabe}
     %}
   }
 %3260 Henry Hudson Pkwy. Bronx, NY 10461
@@ -87,7 +105,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%
-\rsection{Education:} 
+\rsection{Education:}
 
 \rjob{\textbf{Ph.D. Columbia University}}{Sep 2018 - Present}\\
 \begin{ritemize}
@@ -100,14 +118,14 @@
 
 \rjob{\textbf{M.S. Columbia University}}{Sep 2016 - December 2017}\\
 \begin{ritemize}
-  \ritem M.S. in Computer Science (GPA 3.97)
+  \ritem M.S. in Computer Science %(GPA 3.97)
   \ritem Conducted research in modeling and simulating user behavior for Intrusion Detection Lab.
   \ritem Selected Coursework: Security, Deep Learning, Adv. Deep Learning, Data Analytics, Data Exploration Systems, Machine Learning, Natural Language Processing, Operating Systems, Compilers, High Perf. Computing
 \end{ritemize}
 
 \rjob{\textbf{B.S. Swarthmore College}}{June 2013}\\
 \begin{ritemize}
-    \ritem B.S. Engineering, B.A. Computer Science (In Major GPA 3.83)
+    \ritem B.S. Engineering, B.A. Computer Science %(In Major GPA 3.83)
 %\ritem GPA: \begin{tabular}[t]{lr} Computer Science & 3.87\\
 %Engineering & 3.46 \\
 %Overall & 3.56
@@ -124,19 +142,21 @@
 \rsection{Research Experience:}
 
 
-\rjob{\textbf{Research Intern}, Microsoft Research}{Jun 2021 - Aug 2021}\\
-\begin{ritemize}
-    \ritem Research internship with MSR RiSE group advised by Sr. Pr. Scientists Todd Mytkowitz and Shuvendu Lahiri.
-    \ritem Developed \textit{TOGA: A Neural Method for Test Oracle Generation} using neural transformers and a specialized grammar to automatically generate unit tests that are highly effective at finding bugs ($170\%$ improvement over any other evaluated system). Published in ICSE 2022.
-\end{ritemize}
 
 \rjob{\textbf{Graduate Research Assistant}, Columbia Security Lab}{Sep 2018 - Present}\\
 \begin{ritemize}
     %\ritem Working with advisor Prof. Suman Jana using deep learning to develop new approaches to program analysis.
-    \ritem Exploring applications of Transformers and Graphical Neural Networks to guide test generation and API fuzzing advised by Prof. Suman Jana.
-    \ritem Designed the \textit{Continuous Logic Network} (CLN), a new neural architecture that directly models logic with SMT, and led a team of 3 students to implement a new loop invariant inference system (CLN2INV), that is the first to solve all 124 theoretically solvable loop invariant inference problems in the Code2Inv dataset. Published in ICLR 2020, with follow up work in PLDI 2020. 
+    \ritem Exploring applications of Transformers and Probabalistic Models to guide test generation and API fuzzing advised by Prof. Suman Jana.
+    \ritem Designed the \textit{Continuous Logic Network} (CLN), a new neural architecture that directly models logic with SMT, and led a team of 3 students to implement a new loop invariant inference system (CLN2INV), that is the first to solve all 124 theoretically solvable loop invariant inference problems in the Code2Inv dataset. Published in ICLR 2020, with follow up work in PLDI 2020.
   \ritem Developed \textit{Proximal Gradient Analysis} (PGA), a new method for dynamic software analysis that uses nonsmooth optimization methods to approximate gradients over a program. Implemented PGA as an LLVM pass and demonstrated it improved f1 accuracy by 33\% over current methods in measuring dataflows to branches. Published in Usenix Security 2021.
 \end{ritemize}
+
+\rjob{\textbf{Research Intern}, Microsoft Research}{Jun 2021 - Aug 2021}\\
+\begin{ritemize}
+    \ritem Research internship with MSR RiSE group advised by Sr. Pr. Scientists Todd Mytkowitz and Shuvendu Lahiri.
+    \ritem Developed \textit{TOGA: A Neural Method for Test Oracle Generation} using neural transformers and a specialized grammar to automatically generate unit tests that are highly effective at finding bugs ($170\%$ improvement over any other evaluated system). Published in ICSE 2022, awarded ACM SigSoft Distinuished Paper Award.
+\end{ritemize}
+
 
 \rjob{\textbf{MS Graduate Research Assistant}, Columbia IDS Lab}{Fall 2016 - Fall 2017}\\
 \begin{ritemize}
@@ -153,7 +173,7 @@
 %\rjob{\textbf{Seminar Research}, Adv Big Data Analytics}{Spring 2017}\\
 %\begin{ritemize}
   %\ritem Developed graph data queries and synethetic graph data in Tensorflow to demonstrate feasibility of using a deep learning approach to learn graph query parameters.
-  %\ritem Implemented Pagerank Algorithm in Tensorflow and demonstrated dampening parameter could be learned from labeled graph data using back propogation. 
+  %\ritem Implemented Pagerank Algorithm in Tensorflow and demonstrated dampening parameter could be learned from labeled graph data using back propogation.
 %\end{ritemize}
 
 %\rjob{\textbf{Research Fellow}, Bryn Mawr Intelligent Systems Lab}{Summer 2013}\\
@@ -166,7 +186,7 @@
 \rjob{\textbf{Research Assistant}, Woods Hole Oceanographic Institute}{January 2012}\\
 \begin{ritemize}
 \ritem Automated filtering and parsing of data from tow tank tests of a sub-Arctic current meter in MATLAB, setting research weeks ahead of schedule.
-\ritem Conducted frequency analysis of velocity data and developed burst sampling system that improved the signal to noise ratio by a factor of 3 while minimizing computation and radio usage. 
+\ritem Conducted frequency analysis of velocity data and developed burst sampling system that improved the signal to noise ratio by a factor of 3 while minimizing computation and radio usage.
 \ritem Published work in proceedings of Oceans 2012 conference.
 \end{ritemize}
 
@@ -181,7 +201,7 @@
 
 \rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 - August 2018}\\
 \begin{ritemize}
-\ritem Developed web application for managing large scale deployments of User Behavior sensors and data loss detection using Java Spring Framework with AngularJS front end and Hibernate with Postgres and Mongodb databases. Designed and implement REST API using Swagger specification and Oauth2 authentication. 
+\ritem Developed web application for managing large scale deployments of User Behavior sensors and data loss detection using Java Spring Framework with AngularJS front end and Hibernate with Postgres and Mongodb databases. Designed and implement REST API using Swagger specification and Oauth2 authentication.
 \ritem Developed desktop client application for automated large scale document tracker injection using Electron and AngularJS.
 %\ritem Automated deployment and testing of new builds using Beanstalk and AWS Elastic Computing resources.
 %\ritem Integrated high speed file system backed by MongoDb and optimized process for tracking new documents, increasing speed by a factor of over 270\%.
@@ -217,9 +237,9 @@
 
 
 %\rjob{\textbf{IT Associate}, Swarthmore College}{Fall 2011}\\
-%\begin{ritemize} 
+%\begin{ritemize}
 %\ritem Selected for excellent communication skills and practical problem solving ability to work on college IT team.
-%\ritem Fielded calls and walk-ins at IT support office. Addressed security and networking issues on PCs. 
+%\ritem Fielded calls and walk-ins at IT support office. Addressed security and networking issues on PCs.
 %\end{ritemize}
 
 
@@ -236,20 +256,35 @@
 \hspace*{-0.1cm}
 \begin{minipage}{1.01\linewidth}
 \begin{itemize}[label={},itemindent=-2em,leftmargin=2em, parsep=4pt]
-  \item {\bf [ICSE 2022]} \textrm{\fontsize{11pt}{12pt}\selectfont TOGA: A Neural Method for Test Oracle Generation.} E. Dinella*, G. Ryan*, T. Mytkowitz, S. Lahiri. \url{https://arxiv.org/pdf/2109.09262.pdf}
-  \item {\bf [OSDI 2021]} \textrm{\fontsize{11pt}{12pt}\selectfont DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols} J. Yao, R. Tao, R. Gu, J. Nieh, S. Jana, G. Ryan. \url{https://www.usenix.org/system/files/osdi21-yao.pdf}
-  \item {\bf [USENIX Security 2021]} \textrm{\fontsize{11pt}{12pt}\selectfont Fine Grained Dataflow Tracking with Proximal Gradients.} G. Ryan, A. Shah, D. She, K. Bhat, and S. Jana. \url{https://arxiv.org/abs/1909.03461}
-  \item {\bf [PLDI 2020]} \textrm{\fontsize{11pt}{12pt}\selectfont Learning Nonlinear Loop Invariants with Gated Continuous Logic Networks} J. Yao*, G. Ryan*, J. Wong*, S. Jana, and R. Gu. \url{https://arxiv.org/abs/2003.07959}
-  \item {\bf [ICLR 2020]} \textrm{\fontsize{11pt}{12pt}\selectfont CLN2INV: Learning Loop Invariants with Continuous Logic Networks.} G. Ryan*, J. Wong*, Y. Jianan*, R. Gu, and S. Jana. \url{https://arxiv.org/abs/1909.11542}
-  \item {\bf [InfoVis 2018]} \textrm{\fontsize{11pt}{12pt}\selectfont At a Glance: Pixel Approximate Entropy as a Measure of Line Chart Complexity.} G. Ryan, A. Mosca, R. Chang, and E. Wu. \url{https://arxiv.org/abs/1811.03180}
-  \item  {\bf [Oakland S\&P Workshops 2018]} \textrm{\fontsize{11pt}{12pt}\selectfont Simulated User Bots: Real Time Testing of Insider Threat Detection Systems.} P. Dutta, G. Ryan, A. Zieba, and S. Stolfo. \url{https://ieeexplore.ieee.org/document/8424654}
-  \item  {\bf [Oceans 2012]} \textrm{\fontsize{11pt}{12pt}\selectfont Oversampling MAVS for reduction of vortex-shedding velocity-sensing noise.} A. Williams, G. Ryan, and T. Thwaites. \url{https://ieeexplore.ieee.org/document/6404777}
+  \item {\bf [ICSE 2022]}
+    %\textrm{\fontsize{11pt}{12pt}\selectfont TOGA: A Neural Method for Test Oracle Generation.}
+    \textit{TOGA: A Neural Method for Test Oracle Generation.}
+    E. Dinella*, G. Ryan*, T. Mytkowitz, S. Lahiri. \url{https://arxiv.org/pdf/2109.09262.pdf} \textbf{(Distinguished Paper Award)}
+  \item {\bf [OSDI 2021]}
+    \textit{DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols.}
+    J. Yao, R. Tao, R. Gu, J. Nieh, S. Jana, G. Ryan. \url{https://www.usenix.org/system/files/osdi21-yao.pdf} \textbf{(Best Paper Award)}
+  \item {\bf [USENIX Security 2021]}
+    \textit{Fine Grained Dataflow Tracking with Proximal Gradients.}
+    G. Ryan, A. Shah, D. She, K. Bhat, and S. Jana. \url{https://arxiv.org/abs/1909.03461}
+  \item {\bf [PLDI 2020]}
+    \textit{Learning Nonlinear Loop Invariants with Gated Continuous Logic Networks.}
+    J. Yao*, G. Ryan*, J. Wong*, S. Jana, and R. Gu. \url{https://arxiv.org/abs/2003.07959}
+  \item {\bf [ICLR 2020]}
+    \textit{CLN2INV: Learning Loop Invariants with Continuous Logic Networks.}
+    G. Ryan*, J. Wong*, Y. Jianan*, R. Gu, and S. Jana. \url{https://arxiv.org/abs/1909.11542}
+  \item {\bf [InfoVis 2018]}
+    \textit{At a Glance: Pixel Approximate Entropy as a Measure of Line Chart Complexity.}
+    G. Ryan, A. Mosca, R. Chang, and E. Wu. \url{https://arxiv.org/abs/1811.03180}
+  \item  {\bf [Oakland S\&P Workshops 2018]}
+    \textit{Simulated User Bots: Real Time Testing of Insider Threat Detection Systems.}
+    P. Dutta, G. Ryan, A. Zieba, and S. Stolfo. \url{https://ieeexplore.ieee.org/document/8424654}
+  %\item  {\bf [Oceans 2012]} \textrm{\fontsize{11pt}{12pt}\selectfont Oversampling MAVS for reduction of vortex-shedding velocity-sensing noise.} A. Williams, G. Ryan, and T. Thwaites. \url{https://ieeexplore.ieee.org/document/6404777}
 \end{itemize}
 \end{minipage}
 %\rjob{\textbf{Publications}}{}\\
 %\begin{ritemize}
-%\ritem Ryan G, Mosca A, Chang R, and Wu E. "At a Glance: Pixel Approximate Entropy as a Measure of Line Chart Complexity" 2018 IEEE Infovis 
-%\ritem Dutta P, Ryan G, Zieba A, and Stolfo S. "Simulated User Bots: Real Time Testing of Insider Threat Detection Systems" 2018 IEEE SPW 
+%\ritem Ryan G, Mosca A, Chang R, and Wu E. "At a Glance: Pixel Approximate Entropy as a Measure of Line Chart Complexity" 2018 IEEE Infovis
+%\ritem Dutta P, Ryan G, Zieba A, and Stolfo S. "Simulated User Bots: Real Time Testing of Insider Threat Detection Systems" 2018 IEEE SPW
 %\ritem A. J. Williams, G. P. Ryan and F. T. Thwaites, "Oversampling MAVS for reduction of vortex-shedding velocity-sensing noise," 2012 Oceans, Hampton Roads, VA, 2012, pp. 1-10.
 %\end{ritemize}
 
@@ -261,7 +296,7 @@
 
 %\rjob{\textbf{Computer Science Capstone}}{Fall 2012}\\
 %\begin{ritemize}
-%\ritem Implemented wavelet compression algorithm in C++ on a TMoteSky running on Contiki. 
+%\ritem Implemented wavelet compression algorithm in C++ on a TMoteSky running on Contiki.
 %\ritem Modified algorithm for improved efficiency on a low power system, achieving a 78\% decrease in runtime for 2\% decrease in compression performance
 %\end{ritemize}
 
@@ -289,7 +324,7 @@
 \rsection{Technical Summary:}
 
 \hspace*{-0.3cm}
-\textbf{Languages:} Proficient in C/C++, Java, Javascript, Python, and SQL. \\
+\textbf{Languages:} Proficient in Python, C/C++, Java, Javascript, and SQL. \\
 \hspace*{-0.3cm}
 \textbf{Technologies:} Linux, Cloud Compute, Pytorch, Tensorflow, LLVM, Qemu, Z3
 
