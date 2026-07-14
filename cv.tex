@@ -61,14 +61,13 @@
 \newcommand{\rjob}[2]{
   \hspace*{-0.3cm}
 {\fontsize{10pt}{12pt}\selectfont #1} \hfill #2
-\vspace*{0.1cm}
 \hspace*{-1.2cm}
 }
 %\begin{ritemize}...\end{ritemize}
 \newenvironment{ritemize}{
 \hspace*{-0.8cm}
 \begin{minipage}{1.05\linewidth}
-\begin{itemize}
+\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=2pt,partopsep=0pt]
 }{
 \end{itemize}
 \end{minipage}
@@ -92,10 +91,18 @@
 \begin{minipage}{\linewidth}
 \vspace{0.1cm}
   {\fontsize{11}{13}\selectfont
-      \href{mailto:gabriel.ryan11@gmail.com}{gabriel.ryan11@gmail.com} \ \textbar\ \href{https://linkedin.com/in/gabrielryan1}{LinkedIn} \ \textbar\ \href{https://gryan11.github.io}{Website}
+      \href{mailto:gabriel.ryan11@gmail.com}{gabriel.ryan11@gmail.com} \ \textbar\ \href{https://linkedin.com/in/gabrielryan1}{LinkedIn} \ \textbar\ \href{https://gryan11.github.io}{Website} \ \textbar\ \href{https://scholar.google.com/citations?user=6mW4eCcAAAAJ\&hl=en}{Google Scholar}
   }
 \end{minipage}
 \vspace{-0.15cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Research Summary %%%%%%%%%%%%%%%%%%%%%%%%%
+\rsection{Research Summary}
+
+\begin{minipage}{\linewidth}
+Research scientist working on AI-driven software development. My work spans model training and harness design, including completion, context retrieval, and agentic code review now shipping in GitHub Copilot to millions of developers. Before that, my PhD research combined program analysis and machine learning, developing neural methods for program verification, test generation, and vulnerability detection. I'm interested in how far agents can be pushed on real software engineering tasks, particularly through improvements to post-training and multi-agent design.
+\end{minipage}
+\vspace{0.15cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%
 \rsection{Education}
@@ -114,7 +121,7 @@
 \begin{ritemize}
     \ritem Train custom models for Copilot subagents, context compaction, and memory generation using the Slime RL framework. Achieved a 15\% cost reduction with custom subagent models in internal deployments.
     \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality.
-    \ritem Drove a 5\% increase in acceptance rate while reducing latency by 10\%, using OpenAI models trained on a custom code dataset filtered for quality and relevance.
+    \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, driving a 5\% increase in acceptance rate while reducing latency by 10\% through custom code datasets filtered for quality and relevance.
 \end{ritemize}
 
 \rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}\\
@@ -139,18 +146,17 @@
 
 \rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 -- Aug 2018}\\
 \begin{ritemize}
-\ritem Built a web application for managing large-scale deployments of user-behavior sensors and data-loss detection using Java Spring, AngularJS, Hibernate, PostgreSQL, and MongoDB.
-\ritem Designed and implemented a REST API (Swagger spec, OAuth 2.0) and a midstream network document interception and tracking system using Squid Proxy and ICAP.
+\ritem Built systems for managing large-scale deployments of user-behavior sensors and detecting and tracking data loss across enterprise networks.
 \end{ritemize}
 
 \rjob{\textbf{Robotics Software Consultant}, 3DDataLtd}{May 2015 -- Aug 2015}\\
 \begin{ritemize}
-\ritem Built a 3D SLAM framework based on LiDAR Odometry and Mapping, integrating IMU sensor data via an Extended Kalman Filter.
+\ritem Built a LiDAR- and inertial-sensor-based 3D mapping framework for robotic navigation.
 \end{ritemize}
 
 \rjob{\textbf{Radar Software Engineer}, Raytheon}{Sep 2013 -- Apr 2015}\\
 \begin{ritemize}
-\ritem Built software for radar calibration, satellite tracking, antenna diagnostics, and maintenance prioritization in Ada and C++; earned a team achievement award for delivering new diagnostic capabilities ahead of schedule.
+\ritem Built radar calibration, satellite tracking, and antenna diagnostic software; earned a team achievement award for delivering new diagnostic capabilities ahead of schedule.
 \end{ritemize}
 
 
@@ -219,29 +225,32 @@
     J. Yao*, G. Ryan*, J. Wong*, S. Jana, and R. Gu. \url{https://arxiv.org/abs/2003.07959}
   \item {\bf [ICLR 2020]}
     \textit{CLN2INV: Learning Loop Invariants with Continuous Logic Networks.}
-    G. Ryan*, J. Wong*, Y. Jianan*, R. Gu, and S. Jana. \url{https://arxiv.org/abs/1909.11542}
+    G. Ryan*, J. Wong*, J. Yao*, R. Gu, and S. Jana. \url{https://arxiv.org/abs/1909.11542}
 \end{itemize}
 \end{minipage}
 
+\vspace{-0.1cm}
+{\footnotesize * denotes equal contribution.}
 
-\vspace{0.2cm}
+\vspace{0.05cm}
 \rsection{Awards}
 \hspace*{-0.1cm}
 
-\vspace{0.2cm}
 \begin{minipage}{1.01\linewidth}
-\begin{itemize}[label={},itemindent=-2em,leftmargin=2em, parsep=4pt]
+\begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
+  \item {\bf ACM SIGSOFT Distinguished Paper Award}, ICSE 2022 (TOGA).
+  \item {\bf Jay Lepreau Best Paper Award}, OSDI 2021 (DistAI).
   \item {\bf National Defense Science and Engineering Graduate Fellowship} (NDSEG). Awarded NDSEG Fellowship for proposal "Proximal Gradient Analysis for Vulnerability Detection and Defense." 2019.
   \item {\bf NSF Graduate Research Fellowship Honorable Mention}. Accorded honorable mention for proposal "Modeling and Simulating Adversarial User Behavior with Sequential VAEs." 2018.
   \end{itemize}
 \end{minipage}
 
-\vspace{0.2cm}
+\vspace{0.05cm}
 
 \rsection{Academic Service}
 \hspace*{-0.1cm}
 \begin{minipage}{1.01\linewidth}
-\begin{itemize}[label={},itemindent=-2em,leftmargin=2em, parsep=4pt]
+\begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item Workshop on Large Language Models for Code, ICSE 2026. Program Committee.
   \item Next-Gen Code Development with Collaborative AI Agents Workshop, AAAI 2026. Program Committee.
   \item AAAI 2024, 2025, 2026. Program Committee.
@@ -251,11 +260,11 @@
 \end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Technical Skills %%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{0.2cm}
+\vspace{0.05cm}
 \rsection{Technical Skills}
 \hspace*{-0.1cm}
 \begin{minipage}{1.01\linewidth}
-\begin{itemize}[label={},itemindent=-2em,leftmargin=2em, parsep=4pt]
+\begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item \textbf{Languages:} Python, C/C++, Java, JavaScript, SQL, Ada.
   \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), LLM post-training (SFT, DPO, RLHF), prompt engineering, evaluation, data curation.
   \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
