@@ -67,8 +67,8 @@
 \newenvironment{ritemize}{
 \hspace*{-0.8cm}
 \begin{minipage}{1.05\linewidth}
-\vspace{0.1cm}
-\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=2pt,partopsep=0pt]
+\fontsize{10pt}{11pt}\selectfont
+\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=1pt,partopsep=0pt]
 }{
 \end{itemize}
 \end{minipage}
@@ -120,9 +120,10 @@ Research scientist working on AI-driven software development. My work spans mode
 
 \rjob{\textbf{Senior Research Scientist}, Microsoft CodeAI}{Mar 2024 -- Present}\\
 \begin{ritemize}
-    \ritem Train custom models for Copilot subagents, context compaction, and memory generation using the Slime RL framework. Achieved a 15\% cost reduction with custom subagent models in internal deployments.
-    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality.
-    \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, driving a 5\% increase in acceptance rate while reducing latency by 10\% through custom code datasets filtered for quality and relevance.
+    \ritem Train custom models for Copilot subagents, context compaction, and memory generation using the Slime RL framework with SGLang for inference, fine-tuning on internal production Copilot traffic to improve agentic performance and achieving a 15\% cost reduction in internal deployments.
+    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. Configured model deployments using vLLM.
+    \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, fine-tuning on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
+    \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants and analyzing key performance metrics to isolate quality drivers and feed insights back into training and data-curation decisions.
 \end{ritemize}
 
 \rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}\\
@@ -267,7 +268,7 @@ Research scientist working on AI-driven software development. My work spans mode
 \begin{minipage}{1.01\linewidth}
 \begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item \textbf{Languages:} Python, C/C++, Java, JavaScript, SQL, Ada.
-  \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), LLM post-training (SFT, DPO, RLHF), harness engineering, evaluation, data curation.
+  \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), SGLang (RL inference), vLLM (evaluation serving), LLM post-training (SFT, DPO, RLHF), prompt engineering, data curation.
   \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
   \item \textbf{Infrastructure:} Linux, Git, Docker, Azure, AWS, distributed training.
   \end{itemize}
