@@ -103,8 +103,9 @@
 
 \begin{minipage}{\linewidth}
 Research scientist working on AI-driven software development. My work spans model training and harness design, including completion, context retrieval, and agentic code review now shipping in GitHub Copilot to millions of developers. 
-Before that, my PhD research combined program analysis and machine learning, developing neural methods for program verification, test generation, and vulnerability detection. 
-I'm interested in training more capable software engineering agents, particularly through improved post-training and multi-agent design.
+Before that, my PhD research combined program analysis and machine learning, developing neural methods for program verification, test generation, and vulnerability detection.
+I'm interested in post-training and multi-agent methods for building more capable agents across software engineering and related domains that require complex reasoning and long-term planning.
+% I'm interested in training more capable software engineering agents, particularly through improved post-training and multi-agent design.
 % I'm interested in how far agents can be pushed on real software engineering tasks, particularly through post-training and multi-agent design.
 \end{minipage}
 \vspace{0.15cm}
@@ -124,8 +125,8 @@ I'm interested in training more capable software engineering agents, particularl
 
 \rjob{\textbf{Senior Research Scientist}, Microsoft CodeAI}{Mar 2024 -- Present}\\
 \begin{ritemize}
-    \ritem Train custom models for GitHub Copilot subagents, context compaction, and memory generation using the Slime RL framework with SGLang for inference, fine-tuning on production Copilot traffic to improve agentic performance and achieving a 15\% cost reduction in internal deployments.
-    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. Configured model deployments using vLLM.
+    \ritem Train custom models for context retrieval subagents, trajectory compaction, and memory generation using the Slime RL framework with SGLang for inference, fine-tuning on production Copilot traffic to improve agentic performance and achieving a 15\% cost reduction in internal deployments.
+    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval served with vLLM, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. 
     \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, fine-tuning on internal production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
     \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants and analyzing key performance metrics to isolate quality drivers and feed insights back into training and data-curation decisions.
 \end{ritemize}
@@ -272,7 +273,7 @@ I'm interested in training more capable software engineering agents, particularl
 \begin{minipage}{1.01\linewidth}
 \begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item \textbf{Languages:} Python, C/C++, Java, JavaScript, SQL, Ada.
-  \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), SGLang (RL inference), vLLM (evaluation serving), LLM post-training (SFT, DPO, RLHF), prompt engineering, data curation.
+  \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), SGLang (RL inference), vLLM (evaluation serving), LLM post-training (SFT, DPO, GRPO), embedding model training, synthetic data generation
   \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
   \item \textbf{Infrastructure:} Linux, Git, Docker, Azure, AWS, distributed training.
   \end{itemize}
