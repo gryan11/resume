@@ -125,23 +125,23 @@ I'm interested in post-training and multi-agent methods for building more capabl
 
 \rjob{\textbf{Senior Research Scientist}, Microsoft CodeAI}{Mar 2024 -- Present}\\
 \begin{ritemize}
-    \ritem Train custom models for context retrieval subagents, trajectory compaction, and memory generation using the Slime RL framework with SGLang for inference, fine-tuning on production Copilot traffic to improve agentic performance and achieving a 15\% cost reduction in internal deployments.
+    \ritem Train custom models for context retrieval subagents, trajectory compaction, and memory generation using RLVR with the Slime framework and SGLang for inference, fine-tuning on production Copilot traffic to improve agentic performance and achieving a 15\% cost reduction in internal deployments.
     \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval served with vLLM, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. 
-    \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, fine-tuning on internal production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
-    \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants and analyzing key performance metrics to isolate quality drivers and feed insights back into training and data-curation decisions.
+    \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, applying RLVR and reward models based on LLM judges and rubrics, fine-tuned on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
+    \ritem Curate code datasets for post-training, including synthetic data generation and SFT dataset construction.
+    \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants to feed insights back into training.
 \end{ritemize}
 
 \rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}\\
 \begin{ritemize}
-    \ritem Built a novel Linux kernel race prediction analysis using probabilistic and spectral learning. Published in Oakland S\&P 2023.
-    \ritem Designed \textit{Proximal Gradient Analysis} (PGA), a dataflow analysis method based on nonsmooth optimization. Implemented in LLVM. Published in USENIX Security 2021.
+    \ritem Built a novel Linux kernel race prediction analysis using spectral learning, published in Oakland S\&P.
+    \ritem Designed \textit{Proximal Gradient Analysis} (PGA), a dataflow analysis method based on nonsmooth optimization. Implemented in LLVM. Published in USENIX Security.
     \ritem Designed the \textit{Continuous Logic Network} (CLN), a neural architecture for logical learning and reasoning; applied it to learning program invariants for verification. Released a PyTorch library for constructing CLNs. Published in ICLR 2020 and PLDI 2020.
 \end{ritemize}
 
 \rjob{\textbf{Research Intern}, AWS AI Labs}{Jun 2023 -- Aug 2023}\\
 \begin{ritemize}
-  \ritem Built a novel LLM regression-testing approach using static analysis to prompt the model to reason symbolically about program execution paths. Achieved $2\times$ coverage and $3\times$ correct test generations over baseline approaches on CodeGen2, GPT-3.5, and GPT-4.
-  \ritem Published \textit{Code-Aware Prompting} at FSE 2024.
+  \ritem Built a novel LLM regression-testing approach using static analysis to prompt the model to reason symbolically about program execution paths. Achieved $2\times$ coverage and $3\times$ correct test generations over baseline approaches on CodeGen2, GPT-3.5, and GPT-4. Published \textit{Code-Aware Prompting} at FSE 2024.
 \end{ritemize}
 
 
@@ -273,9 +273,10 @@ I'm interested in post-training and multi-agent methods for building more capabl
 \begin{minipage}{1.01\linewidth}
 \begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item \textbf{Languages:} Python, C/C++, Java, JavaScript, SQL, Ada.
-  \item \textbf{ML \& LLMs:} PyTorch, Transformers, Hugging Face, Slime (RL framework), SGLang (RL inference), vLLM (evaluation serving), LLM post-training (SFT, DPO, GRPO), embedding model training, synthetic data generation
-  \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
-  \item \textbf{Infrastructure:} Linux, Git, Docker, Azure, AWS, distributed training.
+  \item \textbf{Frameworks \& Infrastructure:} PyTorch, Transformers, Hugging Face, Slime (RL framework), Ray, SGLang (RL inference), vLLM (evaluation serving), DeepSpeed, Azure ML.
+  \item \textbf{Methods:} LLM post-training (SFT, DPO, RLVR, RLAIF), reward design with LLM judges and rubrics, synthetic data generation, SFT dataset curation, retrieval and embeddings.
+  % \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
+  % \item \textbf{Infrastructure:} Linux, Git, Docker, Azure, AWS, distributed training.
   \end{itemize}
 \end{minipage}
 
