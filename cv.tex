@@ -55,7 +55,7 @@
 \vspace{0.12cm}
 \end{minipage}
 }
-\vspace*{-0.1cm}
+\par\nopagebreak % keep header with the content that follows
 }
 %\rjob{<job title>}{<time>}
 \newcommand{\rjob}[2]{
@@ -65,6 +65,8 @@
 }
 %\begin{ritemize}...\end{ritemize}
 \newenvironment{ritemize}{
+\par\nopagebreak % keep bullets with the preceding \rjob line
+\vspace{-\parskip}
 \hspace*{-0.8cm}
 \begin{minipage}{1.05\linewidth}
 \fontsize{10pt}{11pt}\selectfont
@@ -126,9 +128,9 @@ I'm interested in post-training and agent harness design, and in automating the 
 %%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%
 \rsection{Experience}
 
-\rjob{\textbf{Senior Research Scientist}, Microsoft CodeAI}{Mar 2024 -- Present}\\
+\rjob{\textbf{Senior Research Scientist}, Microsoft CodeAI}{Mar 2024 -- Present}
 \begin{ritemize}
-    \ritem Built automated optimization loops that orchestrate specialist subagents over multi-stage experiment campaigns, applied to the Copilot code review harness (+11pp F1 review comment improvement), LLM judges for online quality metrics (-43\% error rate) and to embedding model training recipes (+10pp NDCG improvement).
+    \ritem Developed automated research agent that orchestrates specialist subagents over multi-stage experiment campaigns, applied to the Copilot code review harness (+11pp F1 review comment improvement), LLM judges for online quality metrics (-43\% error rate) and to embedding model training recipes (+10pp NDCG improvement).
     \ritem Post-trained agentic model for context retrieval subagent using RLVR and information-gain objectives with the Slime framework and SGLang for inference, achieving a 15\% cost reduction in A/B testing on GitHub Copilot agent.
     \ritem Developed an efficient code embedding model used to index GitHub for Copilot's context retrieval served with vLLM, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. 
     \ritem Trained the code completion models powering GitHub Copilot in editors used by millions of developers, applying RLVR and reward models based on LLM judges and rubrics, fine-tuned on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
@@ -136,42 +138,42 @@ I'm interested in post-training and agent harness design, and in automating the 
     \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants to feed insights back into training and harness design.
 \end{ritemize}
 
-\rjob{\textbf{Postdoctoral Research Scientist}, Columbia ARiSE Lab}{Jan 2024 -- Mar 2024}\\
+\rjob{\textbf{Postdoctoral Research Scientist}, Columbia ARiSE Lab}{Jan 2024 -- Mar 2024}
 \begin{ritemize}
     \ritem Contributed to LLM-based linux kernel bug localization and repair research, including benchmark design and evaluation of LLMs on kernel bug repair tasks. 
 \end{ritemize}
 
-\rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}\\
+\rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}
 \begin{ritemize}
     \ritem Built a novel Linux kernel race prediction analysis using spectral learning, published in Oakland S\&P and OOPSLA.
     \ritem Designed \textit{Proximal Gradient Analysis} (PGA), a dataflow analysis method based on nonsmooth optimization. Implemented in LLVM. Published in USENIX Security.
     \ritem Designed the \textit{Continuous Logic Network} (CLN), a neural architecture for logical learning and reasoning; applied it to learning program invariants for verification. Released a PyTorch library for constructing CLNs. Published in ICLR and PLDI.
 \end{ritemize}
 
-\rjob{\textbf{Research Intern}, AWS AI Labs}{Jun 2023 -- Aug 2023}\\
+\rjob{\textbf{Research Intern}, AWS AI Labs}{Jun 2023 -- Aug 2023}
 \begin{ritemize}
   \ritem Built a novel LLM regression-testing approach using static analysis to prompt the model to reason symbolically about program execution paths. Achieved $2\times$ coverage and $3\times$ correct test generations over baseline approaches on CodeGen2, GPT-3.5, and GPT-4. Published \textit{Code-Aware Prompting} at FSE 2024.
 \end{ritemize}
 
 
-\rjob{\textbf{Research Intern}, Microsoft Research}{Jun 2021 -- Aug 2021}\\
+\rjob{\textbf{Research Intern}, Microsoft Research}{Jun 2021 -- Aug 2021}
 \begin{ritemize}
     \ritem Built \textit{TOGA: A Neural Method for Test Oracle Generation} using Transformers (CodeBERT) and a specialized grammar to generate unit tests, demonstrating a 170\% improvement over prior work in bug detection.
     \ritem Published at ICSE 2022; awarded ACM SIGSOFT Distinguished Paper Award.
 \end{ritemize}
 
-\clearpage{}
-\rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 -- Aug 2018}\\
+% \clearpage{}
+\rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 -- Aug 2018}
 \begin{ritemize}
 \ritem Built systems for managing large-scale deployments of user-behavior sensors and detecting and tracking data loss across enterprise networks.
 \end{ritemize}
 
-\rjob{\textbf{Robotics Software Consultant}, 3DDataLtd}{May 2015 -- Aug 2015}\\
+\rjob{\textbf{Robotics Software Consultant}, 3DDataLtd}{May 2015 -- Aug 2015}
 \begin{ritemize}
 \ritem Built a LiDAR- and inertial-sensor-based 3D mapping framework for robotic navigation.
 \end{ritemize}
 
-\rjob{\textbf{Radar Software Engineer}, Raytheon}{Sep 2013 -- Apr 2015}\\
+\rjob{\textbf{Radar Software Engineer}, Raytheon}{Sep 2013 -- Apr 2015}
 \begin{ritemize}
 \ritem Built radar calibration, satellite tracking, and antenna diagnostic software; earned a team achievement award for delivering new diagnostic capabilities ahead of schedule.
 \end{ritemize}
@@ -250,6 +252,19 @@ I'm interested in post-training and agent harness design, and in automating the 
 {\footnotesize * denotes equal contribution.}
 
 \vspace{0.05cm}
+\rsection{Patents}
+\hspace*{-0.1cm}
+
+\begin{minipage}{1.01\linewidth}
+\begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
+  \item \textit{Software Framework Importance Sampling for Post-Training Large Language Models on Modern Software Libraries and Frameworks.}
+    \textbf{G. Ryan}, X. Liu, S. Fu. U.S. patent application filed June 2026.
+  \item \textit{Multi-Stage RL Training for a Search Subagent.}
+    S. Garg, A. Agarwal, Y. Huang, S. Fu, \textbf{G. Ryan}, C. Merkel. U.S. patent application filed July 2026.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.05cm}
 \rsection{Awards}
 \hspace*{-0.1cm}
 
@@ -277,7 +292,7 @@ I'm interested in post-training and agent harness design, and in automating the 
 \end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Technical Skills %%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage{}
+% \clearpage{}
 \vspace{0.05cm}
 \rsection{Technical Skills}
 \hspace*{-0.1cm}
