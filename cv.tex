@@ -106,12 +106,14 @@
 \begin{minipage}{\linewidth}
 Research scientist working on AI-driven software development. My work spans model training and harness design, including completion, context retrieval, and agentic code review now shipping in GitHub Copilot to millions of developers. 
 Before that, my PhD research combined program analysis and machine learning, developing neural methods for program verification, test generation, and vulnerability detection.
-I'm interested in improving agent performance on tasks that require complex, long horizon reasoning through post-training and agent harness design.
+I'm interested in improving agent performance on software engineering and other tasks that require complex, long horizon reasoning through post-training and agent harness design.
 % I'm interested in automating the research and optimization loops behind post-training and agent harness design.
 % I'm interested in post-training and automated self-improvement for building more capable agents across software engineering and related domains that require complex reasoning and long term planning.
 % I'm interested in post-training and multi-agent methods for building more capable agents across software engineering and related domains that require complex reasoning and long-term planning.
 % I'm interested in training more capable software engineering agents, particularly through improved post-training and multi-agent design.
 % I'm interested in how far agents can be pushed on real software engineering tasks, particularly through post-training and multi-agent design.
+% code metal:
+% Research scientist working at the intersection of program analysis and machine learning. My PhD developed neural methods for program verification, test generation, and vulnerability detection, including learning invariants for automated verification, guiding neural test generation with static analysis, and dataflow analysis implemented in LLVM. More recently I post-train code models at Microsoft CodeAI, spanning completion, context retrieval, and agentic code review now shipping in GitHub Copilot to millions of developers. I'm interested in improving SWE agents through post-training and harness optimization to make AI-generated code more trustworthy and reliable.
 \end{minipage}
 \vspace{0.15cm}
 
@@ -133,16 +135,16 @@ I'm interested in improving agent performance on tasks that require complex, lon
     \ritem Developed automated research agent that orchestrates specialist subagents over multi-stage experiment campaigns, applied to the Copilot code review harness (+11pp F1 review comment improvement), LLM judges for online quality metrics (-43\% error rate), and embedding model training recipes (+10pp NDCG improvement).
     % \ritem Post-trained agentic model for context retrieval subagent using RLVR and GSPO with the Slime framework and SGLang for inference, achieving a 15\% cost reduction in internal A/B testing on GitHub Copilot agent.
     \ritem Post-trained agentic context retrieval subagent with GSPO, designing a plan-based LLM-judge reward to replace ground-truth location matching; trained with Slime and SGLang for inference, achieving a 15\% cost reduction in internal A/B testing on GitHub Copilot agent.
-    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval served with vLLM, trained on mixture of queries mined from agent trajectories and synthetic data, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality (patent filed). 
+    \ritem Led development of an efficient code embedding model used to index GitHub for Copilot's context retrieval served with vLLM, trained on mixture of queries mined from agent trajectories and synthetic data, reducing indexing cost by $2\times$ and index size by $3\times$ while improving retrieval quality. 
     % \ritem Led development of posttraining data for code completion models powering GitHub Copilot in editors used by millions of developers, applying RLVR and reward models based on LLM judges and rubrics, fine-tuned on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
-    \ritem Led development of post-training data for the code completion models powering GitHub Copilot in editors, using importance sampling over software framework versions to calibrate training data mix and developing rubrics to judge completions, fine-tuned on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
+    \ritem Led development of post-training data for the code completion models powering GitHub Copilot in editors, using importance sampling over software framework versions to calibrate training data mix and developing rubrics to judge completions. Fine-tuned on production usage data to drive a 5\% acceptance-rate increase while reducing latency by 10\%.
     % \ritem Curate code datasets for mid-training and post-training, including synthetic data generation and SFT dataset construction.
     \ritem Configured and ran production A/B experiments through Microsoft's ExP platform, serving competing model variants to feed insights back into training and harness design.
 \end{ritemize}
 
 \rjob{\textbf{Postdoctoral Research Scientist}, Columbia ARiSE Lab}{Jan 2024 -- Mar 2024}
 \begin{ritemize}
-    \ritem Developed LLM-based linux kernel bug localization and repair research, including benchmark design and evaluation of LLMs on kernel bug repair tasks. 
+    \ritem Worked on LLM-driven linux kernel bug localization and repair, including benchmark design and evaluation of LLMs on kernel bug repair tasks. 
 \end{ritemize}
 
 \rjob{\textbf{Doctoral Researcher}, Columbia Security Lab}{Sep 2018 -- Dec 2023}
@@ -167,17 +169,17 @@ I'm interested in improving agent performance on tasks that require complex, lon
 % \clearpage{}
 \rjob{\textbf{Software Engineer}, Allure Security Technology}{Sep 2015 -- Aug 2018}
 \begin{ritemize}
-\ritem Built systems for managing large-scale deployments of user-behavior sensors and detecting and tracking data loss across enterprise networks.
+\ritem Built systems for managing large-scale deployments of user-behavior sensors and detecting and tracking data loss across enterprise networks using Java Spring framework and MySQL.
 \end{ritemize}
 
 \rjob{\textbf{Robotics Software Consultant}, 3DDataLtd}{May 2015 -- Aug 2015}
 \begin{ritemize}
-\ritem Built a LiDAR- and inertial-sensor-based 3D mapping framework for robotic navigation.
+\ritem Built a LiDAR- and inertial-sensor-based 3D mapping framework for robotic navigation in ROS.
 \end{ritemize}
 
 \rjob{\textbf{Radar Software Engineer}, Raytheon}{Sep 2013 -- Apr 2015}
 \begin{ritemize}
-\ritem Built radar calibration, satellite tracking, and antenna diagnostic software; earned a team achievement award for delivering new diagnostic capabilities ahead of schedule.
+\ritem Built radar calibration, satellite tracking, and antenna diagnostic software for THAAD ballistic missile defense systems implemented in Ada; earned a team achievement award for delivering new diagnostic capabilities ahead of schedule.
 \end{ritemize}
 
 
@@ -287,7 +289,7 @@ I'm interested in improving agent performance on tasks that require complex, lon
 \begin{itemize}[label={},itemindent=-2em,leftmargin=2em,parsep=1pt,itemsep=0pt,topsep=3pt]
   \item Workshop on Large Language Models for Code, ICSE 2026. Program Committee.
   \item Next-Gen Code Development with Collaborative AI Agents Workshop, AAAI 2026. Program Committee.
-  \item AAAI 2024, 2025, 2026. Program Committee.
+  \item AAAI 2024, 2025, 2026, 2027. Program Committee.
   % \item TOSEM 2023, 2024. Reviewer.
   % \item AAAI 2023. Reviewer.
   \end{itemize}
@@ -303,7 +305,7 @@ I'm interested in improving agent performance on tasks that require complex, lon
   \item \textbf{Languages:} Python, C/C++, Java, JavaScript, SQL, Ada.
   \item \textbf{Frameworks \& Infrastructure:} PyTorch, Transformers, Hugging Face, Slime (RL framework), Ray, SGLang (RL inference), vLLM (evaluation serving), DeepSpeed, Azure ML.
   \item \textbf{Methods:} LLM post-training (SFT, DPO, RLVR, RLAIF), reward design with LLM judges and rubrics, synthetic data generation, SFT dataset curation, retrieval and embeddings.
-  % \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, Linux kernel, fuzzing.
+  % \item \textbf{Program Analysis \& Systems:} LLVM, Z3, static \& dynamic analysis, invariant learning, Linux kernel.
   % \item \textbf{Infrastructure:} Linux, Git, Docker, Azure, AWS, distributed training.
   \end{itemize}
 \end{minipage}
